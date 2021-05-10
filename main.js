@@ -59,7 +59,7 @@ class TodoList {
         let lastId = this._todo_list[this._todo_list.length - 1]?.id;
 
         if (!lastId) this._todo_list.push({ id: 0, content: content });
-        else this._todo_list.push({ id: lastId, content: content });
+        else this._todo_list.push({ id: lastId + 1, content: content });
 
         localStorage.setItem('todolist', JSON.stringify(this._todo_list));
     }
